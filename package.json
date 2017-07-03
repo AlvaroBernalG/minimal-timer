@@ -1,0 +1,38 @@
+{
+  "name": "minimal-timer",
+  "version": "0.1.0",
+  "description": "Minimal time tracker. ",
+  "main": "index.js",
+  "homepage": "https://github.com/alvarobernalg/minimal-timer.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvarobernalg/minimal-timer.git"
+  },
+  "scripts": {
+    "test": "./node_modules/jest/bin/jest.js"
+  },
+  "keywords": [
+    "timer",
+    "minimal",
+    "clock",
+    "time",
+    "tracker"
+  ],
+  "author": {
+    "name": "Alvaro Bernal Gimeno",
+    "email": "alvaro.bernal.gimeno@gmail.com"
+  },
+  "license": "M.I.T",
+  "devDependencies": {
+    "jest": "^20.0.4"
+  },
+  "standard": {
+    "global": [
+      "it",
+      "expect",
+      "describe",
+      "test"
+    ]
+  },
+  "reveal": "true"
+}
