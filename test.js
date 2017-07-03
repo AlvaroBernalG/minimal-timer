@@ -4,6 +4,8 @@ const between = require('in-between')
 
 test('should keep track of the elapsedTime correctly.', async () => {
   const chrono = timer()
+  
+  chrono.start()
 
   await sleep(500)
 
@@ -14,6 +16,8 @@ test('stop() should stop tracking time.',
   async () => {
     const chrono = timer()
 
+    chrono.start()
+
     await sleep(500)
 
     chrono.stop()
@@ -23,17 +27,21 @@ test('stop() should stop tracking time.',
     expect(between(490, 520)(chrono.elapsedTime())).toBe(true)
   })
 
-it('resume() should resume time tracking.', async () => {
+it('start() should start/resume time tracking.', async () => {
+
   const chrono = timer()
 
+  chrono.start()
+
   await sleep(500)
+
   chrono.stop()
 
   await sleep(500)
 
   expect(between(490, 520)(chrono.elapsedTime())).toBe(true)
 
-  chrono.resume()
+  chrono.start()
 
   await sleep(500)
 
@@ -43,19 +51,10 @@ it('resume() should resume time tracking.', async () => {
 
   await sleep(500)
 
-  chrono.resume()
+  chrono.start()
 
   await sleep(500)
 
   expect(between(1490, 1530)(chrono.elapsedTime())).toBe(true)
 })
 
-it('should throw error if resume() is executed when timer is already runnig.', async () => {
-  const chrono = timer()
-
-  await sleep(500)
-
-  expect(() => {
-    chrono.resume()
-  }).toThrow()
-})

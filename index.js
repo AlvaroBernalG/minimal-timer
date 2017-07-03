@@ -1,16 +1,16 @@
 const compute = (startTime, elapsedTime = 0) => (+new Date() - startTime) + elapsedTime
 
-module.exports = (startTime = +new Date(), elapsedTime = 0, running = true) => ({
-  resume () {
-    if (running) throw new Error('timer is already running.')
+module.exports = (startTime = 0, elapsedTime = 0, running = false) => ({
+  start () {
     running = true
-    startTime = +new Date()
+    return startTime = +new Date()
   },
   stop () {
     running = false
-    elapsedTime = compute(startTime, elapsedTime)
+    return elapsedTime = compute(startTime, elapsedTime)
   },
-  elapsedTime () {
-    return running ? compute(startTime, elapsedTime) : elapsedTime
-  }
+  elapsedTime: ()=> running ? compute(startTime, elapsedTime) : elapsedTime,
+
+  isRunning: ()=> running
+  
 })
