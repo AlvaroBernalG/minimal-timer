@@ -45,12 +45,14 @@ Creates a new instance
 
 ### start() `number`
 
-Start/resumes the timer
+Starts/Restart the timer
+
 Returns the current time in miliseconds
 
 ### stop() `number`
 
 Stops the timer 
+
 Returns the elapsed time in miliseconds
 
 ### elapsedTime() `number` 
