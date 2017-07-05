@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install minimal-timer
+$ npm install minimal-timer --save
 ```
 
 ## Usage 
@@ -15,7 +15,7 @@ $ npm install minimal-timer
 const delay = require('delay')
 const timer = require('minimal-timer')
 
-const time = timer() // initializing timer
+const time = timer() // instantiates the timer
 
 time.start()
 
@@ -38,6 +38,10 @@ console.log(time.elapsedTime()) // => 1000 +-
 ```
 
 ## API
+
+### timer() `object`
+
+Creates a new instance 
 
 ### start() `number`
 

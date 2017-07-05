@@ -4,7 +4,7 @@ const between = require('in-between')
 
 test('should keep track of the elapsedTime correctly.', async () => {
   const chrono = timer()
-  
+
   chrono.start()
 
   await sleep(500)
@@ -28,7 +28,6 @@ test('stop() should stop tracking time.',
   })
 
 it('start() should start/resume time tracking.', async () => {
-
   const chrono = timer()
 
   chrono.start()
@@ -57,4 +56,3 @@ it('start() should start/resume time tracking.', async () => {
 
   expect(between(1490, 1530)(chrono.elapsedTime())).toBe(true)
 })
-
