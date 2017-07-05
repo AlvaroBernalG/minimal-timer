@@ -56,3 +56,32 @@ it('start() should start/resume time tracking.', async () => {
 
   expect(between(1490, 1530)(chrono.elapsedTime())).toBe(true)
 })
+
+it('start should restart the timer if it has already started.', async ()=>{
+  const chrono = timer()
+
+  chrono.start()
+  
+  await sleep(200)
+
+  chrono.start()
+
+  await sleep(200)
+
+  expect(between(190, 220)(chrono.elapsedTime())).toBe(true)
+
+})
+
+
+it('stop should return the elapsed time in miliseconds.', async ()=>{
+  const chrono = timer()
+
+  chrono.start()
+  
+  await sleep(200)
+
+  expect(between(190, 220)(chrono.stop())).toBe(true)
+
+})
+
+
