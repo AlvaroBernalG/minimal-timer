@@ -1,9 +1,9 @@
 const compute = (startTime, elapsedTime) => (+new Date() - startTime) + elapsedTime
 
 module.exports = (startTime = 0, elapsedTime = 0, running = false) => ({
-  start () {
+  start (customDate = new Date()) {
     running = true
-    return startTime = +new Date()
+    return startTime = +customDate
   },
   stop () {
     running = false

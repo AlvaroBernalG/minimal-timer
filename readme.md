@@ -43,9 +43,11 @@ console.log(time.elapsedTime()) // => 1000 +-
 
 Creates a new instance 
 
-### start() `number`
+### start(customStartDate[optional]) `number`
 
 Starts/Restart the timer
+
+customStartDate `Date` [optional]
 
 Returns the current time in miliseconds
 
@@ -57,7 +59,7 @@ Returns the elapsed time in miliseconds
 
 ### elapsedTime() `number` 
 
-Returns the elapased time in miliseconds
+Returns the elapased between the start time and the current  time in miliseconds
 
 ### isRunning() `boolean` 
 

@@ -1,6 +1,6 @@
 {
   "name": "minimal-timer",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "Minimal time tracker. ",
   "main": "index.js",
   "homepage": "https://github.com/alvarobernalg/minimal-timer.git",
@@ -15,9 +15,12 @@
   "keywords": [
     "timer",
     "minimal",
-    "clock",
+    "stopwatch",
     "time",
     "tracker",
+    "tracking",
+    "chronometer",
+    "clock",
     "miliseconds"
   ],
   "author": {
