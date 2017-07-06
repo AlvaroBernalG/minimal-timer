@@ -43,13 +43,11 @@ console.log(time.elapsedTime()) // => 1000 +-
 
 Creates a new instance 
 
-### start(customStartDate[optional]) `number`
+### start(customStartDate[optional]) `void`
 
 Starts/Restart the timer
 
 customStartDate `Date` [optional]
-
-Returns the current time in miliseconds
 
 ### stop() `number`
 
