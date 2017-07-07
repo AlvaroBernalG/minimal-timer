@@ -25,6 +25,7 @@ test('isRunning() should return true if timer is already running otherwise false
   chrono.stop()
 
   t.is(chrono.isRunning(), false)
+
 })
 
 test('stop() should return the elapsed time in miliseconds.', async (t) => {
@@ -50,7 +51,8 @@ test('stop() should stop tracking time.', async (t) => {
 
   t.is(between(190, 220)(chrono.elapsedTime()), true)
 })
-test('start() should start/resume time tracking.', async (t) => {
+
+test('resume() should resume time tracking.', async (t) => {
   const chrono = chronometer()
 
   chrono.start()
@@ -63,7 +65,7 @@ test('start() should start/resume time tracking.', async (t) => {
 
   t.is(between(190, 220)(chrono.elapsedTime()), true)
 
-  chrono.start()
+  chrono.resume()
 
   await sleep(200)
 
@@ -73,7 +75,7 @@ test('start() should start/resume time tracking.', async (t) => {
 
   await sleep(200)
 
-  chrono.start()
+  chrono.resume()
 
   await sleep(200)
 

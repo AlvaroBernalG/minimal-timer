@@ -1,6 +1,6 @@
 {
   "name": "minimal-timer",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "description": "Minimal time tracker. ",
   "main": "index.js",
   "homepage": "https://github.com/alvarobernalg/minimal-timer.git",

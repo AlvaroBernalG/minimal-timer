@@ -2,7 +2,8 @@ const compute = (startTime, elapsedTime) => (+new Date() - startTime) + elapsedT
 
 module.exports = (startTime = 0, elapsedTime = 0, running = false) => ({
   start (customDate = new Date()) {
-    running = true
+    running = true 
+    elapsedTime = 0
     startTime = +customDate
   },
   stop () {
@@ -12,5 +13,11 @@ module.exports = (startTime = 0, elapsedTime = 0, running = false) => ({
   },
   elapsedTime: () => running ? compute(startTime, elapsedTime) : elapsedTime,
 
-  isRunning: () => running
+  isRunning: () => running,
+
+  resume(){
+    if(this.isRunning()) return
+    running = true
+    startTime = +new Date()
+  }
 })

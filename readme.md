@@ -29,7 +29,7 @@ await delay(500)
 
 console.log(time.elapsedTime()) // => 500 +- 
 
-time.start()
+time.resume()
 
 await delay(500)
 
@@ -48,6 +48,10 @@ Creates a new instance
 Starts/Restart the timer
 
 customStartDate `Date` [optional]
+
+### resume() `void`
+
+Resumes the timer.
 
 ### stop() `number`
 
